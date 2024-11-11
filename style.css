@@ -81,17 +81,34 @@ body {
 
 /* Медиа-запросы для адаптивности */
 @media (max-width: 768px) {
-    .business-card {
-        width: 90%; /* Увеличиваем ширину для мобильных устройств */
+    .FIO {
+        font-size: 24px;
+        right: 5%;
     }
 
-    .name {
-        font-size: 20px;
+    .t1, .t2, .t3, .t4, .t5, .t6, .t7, .t8, .t9, .obr, .Dol, .st, .k1 {
+        font-size: 24px;
     }
 
-    .title {
+    .Image-1 {
+        width: 80%; /* Адаптивная ширина изображения */
+        height: auto; /* Сохраняем пропорции */
+    }
+
+    .rect-round, .rect-round5, .rect-round6, .rect-round7, .rect-round8, .rect-round9 {
+        width: 90%; /* Адаптивная ширина для прямоугольников */
+        margin: 10px auto; /* Центрируем */
+    }
+
+    .tele, .Email {
         font-size: 18px;
     }
+}
+/*
+@media (max-width: 480px) {
+    .FIO {
+        font-size: 20px;
+        right: 3%;
+    }
 
-    .phone, .email {
-        font
+    .t1, .t2, .t3, .t4, .t5, .t6,*/
