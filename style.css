@@ -39,7 +39,7 @@ body {
 }
 
 .gallery-page {
-    justify-content: center;
+    /* justify-content: center; */
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 15px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
@@ -192,8 +192,11 @@ body {
 }
 
 .gallery {
-    display: grid;
+    display: flex;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Автоматическая сетка */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
     gap: 10px; /* Отступы между изображениями */
     max-width: 786px; /* Максимальная ширина галереи */
     width: 100%; /* Ширина галереи */
@@ -201,8 +204,10 @@ body {
 }
 
 .gallery img {
-    width: 100%; /* Ширина изображения 100% от родительского элемента */
+    width: 100%; /* Задаем 100% ширины для адаптивности */
+    max-width: 200px; /* Максимальная ширина изображения */
     height: auto; /* Автоматическая высота для сохранения пропорций */
+    cursor: pointer;
     border-radius: 8px; /* Закругленные углы */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Тень для изображения */
     transition: transform 0.3s; /* Плавный переход для эффекта при наведении */
@@ -321,4 +326,53 @@ body {
 .overlay img {
     max-width: 90%; /* Максимальная ширина увеличенного изображения */
     max-height: 90%; /* Максимальная высота увеличенного изображения */
+}
+
+
+/* нонвое */
+
+
+
+
+.downloads {
+    margin-top: 20px;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.overlay img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+/* Медиа-запросы для адаптивности */
+@media (max-width: 768px) {
+    .gallery img {
+        max-width: 150px; /* Уменьшаем максимальную ширину изображений на меньших экранах */
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery img {
+        max-width: 100px; /* Уменьшаем максимальную ширину изображений на еще меньших экранах */
+    }
+
+    .gallery-page {
+        padding: 10px; /* Уменьшаем отступы на маленьких экранах */
+    }
+
+    .downloads {
+        margin-top: 10px; /* Уменьшаем отступ для загрузок */
+    }
 }
