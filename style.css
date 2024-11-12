@@ -6,7 +6,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    margin: 4% auto;
+    /* height: 100vh; */
 }
 
 .background {
@@ -35,7 +36,6 @@ body {
     padding: 20px;
     text-align: center;
     width: 500px; /* Ширина визитки */
-    margin-top: 5%;
 }
 
 .gallery-page {
