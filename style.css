@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #D8DBFD;
-    font-family: 'Caveat', sans-serif;
+    font-family: 'Karla', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,6 +26,26 @@ body {
     padding: 20px;
     text-align: center;
     width: 300px; /* Ширина визитки */
+} 
+
+.business-page {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    width: 500px; /* Ширина визитки */
+    margin-top: 5%;
+}
+
+.gallery-page {
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    width: 700px; /* Ширина визитки */
 }
 
 .Image-1 {
@@ -65,7 +85,7 @@ body {
 
 .button {
     display: inline-block;
-    background-color: #4CAF50; /* Зеленый цвет фона */
+    background-color: #9966CC; /* Зеленый цвет фона */
     color: white; /* Цвет текста */
     padding: 10px 20px; /* Отступы */
     margin: 5px; /* Отступ между кнопками */
@@ -104,11 +124,201 @@ body {
         font-size: 18px;
     }
 }
-/*
-@media (max-width: 480px) {
-    .FIO {
-        font-size: 20px;
-        right: 3%;
-    }
 
-    .t1, .t2, .t3, .t4, .t5, .t6,*/
+.downloads {
+    /* background-color: #b1c0ca; Полупрозрачный фон */
+    padding: 1px;
+    /* margin: 10px auto; */
+    border-radius: 10px; /* Скругление углов */
+    max-width: 100%; /* Максимальная ширина блока */
+    text-align: center; /* Центрирование текста */
+}
+
+.downloads h2 {
+    margin-bottom: 15px; /* Отступ снизу */
+}
+
+.downloads ul {
+    list-style-type: none; /* Убираем маркеры списка */
+    padding: 0; /* Убираем отступы */
+}
+
+.downloads li {
+    margin: 10px 0; /* Добавляем отступ между элементами списка */
+}
+
+.download-button {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 0px;
+    background-color: #6666CC; /* Цвет кнопок для скачивания */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px; /* Скругление углов */
+    transition: background-color 0.3s; /* Плавный переход цвета */
+    width: 90%;
+}
+
+.download-button:hover {
+    background-color: #FFCCCC; /* Цвет кнопки при наведении */
+}
+
+
+.empty-button {
+    width: 90%;
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 5px;
+    background-color: #6666CC; /* Цвет кнопок для скачивания */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px; /* Скругление углов */
+    transition: background-color 0.3s; /* Плавный переход цвета */
+}
+
+
+#expandingDiv {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+    transition: all 0.5s ease; /* Плавный переход для всех свойств */
+}
+
+#expandingDiv.expanded {
+    width: 400px; /* Установите желаемую конечную ширину */
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Автоматическая сетка */
+    gap: 10px; /* Отступы между изображениями */
+    max-width: 786px; /* Максимальная ширина галереи */
+    width: 100%; /* Ширина галереи */
+    margin-top: 2%;
+}
+
+.gallery img {
+    width: 100%; /* Ширина изображения 100% от родительского элемента */
+    height: auto; /* Автоматическая высота для сохранения пропорций */
+    border-radius: 8px; /* Закругленные углы */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Тень для изображения */
+    transition: transform 0.3s; /* Плавный переход для эффекта при наведении */
+}
+
+.gallery img:hover {
+    transform: scale(1.05); /* Увеличение изображения при наведении */
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* Вертикальное расположение элементов */
+    align-items: center; /* Центрируем содержимое по горизонтали */
+    justify-content: center; /* Центрируем содержимое по вертикали */
+    text-align: center; /* Центрируем текст заголовка */
+    margin-top: 5%;
+}
+
+.slider {
+    position: relative;
+    max-width: 100%; /* Уменьшенная максимальная ширина слайдера */
+    width: 40%; /* Ширина слайдера 100% от родительского элемента */
+    overflow: hidden; /* Скрыть переполнение */
+    border-radius: 10px; /* Закругленные углы */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Тень для слайдера */
+}
+
+.slides {
+    display: flex; /* Используем флекс для размещения изображений в ряд */
+    transition: transform 0.5s ease; /* Плавный переход при смене слайда */
+}
+
+.slides img {
+    max-width: 100%; /* Ширина изображения 100% от родительского элемента */
+    width: 100%;
+    height: auto; /* Автоматическая высота для сохранения пропорций */
+}
+
+.prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.9); /* Полупрозрачный фон */
+    border: none; /* Убираем границу */
+    border-radius: 10%; /* Круглая форма кнопки */
+    cursor: pointer; /* Указатель при наведении */
+    padding: 10px; /* Отступы внутри кнопки */
+    font-size: 24px; /* Размер шрифта */
+    z-index: 1; /* Поверх изображений */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Тень для кнопки */
+    transition: background-color 0.3s, transform 0.3s; /* Плавный переход */
+    left: 10px; /* Расположение кнопки "Назад" */
+
+    
+}
+
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.9); /* Полупрозрачный фон */
+    border: none; /* Убираем границу */
+    border-radius: 10%; /* Круглая форма кнопки */
+    cursor: pointer; /* Указатель при наведении */
+    padding: 10px; /* Отступы внутри кнопки */
+    font-size: 24px; /* Размер шрифта */
+    z-index: 1; /* Поверх изображений */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Тень для кнопки */
+    transition: background-color 0.3s, transform 0.3s; /* Плавный переход */
+    right: 10px; /* Расположение кнопки "Вперед" */
+
+}
+
+
+.thumbnails {
+    display: flex; /* Используем флекс для размещения миниатюр в ряд */
+    overflow-x: auto; /* Горизонтальная прокрутка */
+    overflow-y: hidden; /* Скрыть вертикальную прокрутку */
+    white-space: nowrap; /* Запретить перенос строк */
+    margin-top: 10px; /* Отступ сверху */
+    max-width: 400px; /* Максимальная ширина контейнера миниатюр */
+    height: 100px; /* Фиксированная высота для контейнера миниатюр */
+}
+
+.thumbnail {
+    width: 80px; /* Ширина миниатюры */
+    height: auto; /* Автоматическая высота для сохранения пропорций */
+    margin: 0 5px; /* Отступы между миниатюрами */
+    cursor: pointer; /* Указатель при наведении */
+    border: 2px solid transparent; /* Граница для эффекта при наведении */
+    transition: border 0.3s; /* Плавный переход для границы */
+}
+
+.thumbnail:hover {
+    border: 2px solid #007bff; /* Цвет границы при наведении */
+}
+
+.thumbnail.active {
+    border: 2px solid #007bff; /* Цвет границы для активной миниатюры */
+    opacity: 0.7; /* Уменьшаем непрозрачность для выделения */
+}
+
+.overlay {
+    display: none; /* Скрываем оверлей по умолчанию */
+    position: fixed; /* Фиксированное позиционирование */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Полупрозрачный черный фон */
+    justify-content: center; /* Центрируем содержимое */
+    align-items: center; /* Центрируем содержимое */
+    z-index: 10; /* Поверх всех элементов */
+}
+
+.overlay img {
+    max-width: 90%; /* Максимальная ширина увеличенного изображения */
+    max-height: 90%; /* Максимальная высота увеличенного изображения */
+}

@@ -9,16 +9,66 @@
 </head>
 <body>
     <div class="background"></div>
-    <div class="info-page">
-        <h1>Фотографии</h1>
-        <p>Здесь вы можете написать о себе, своих интересах, увлечениях и т.д.</p>
+    <div class="gallery-page">
+        <h1>Галерея</h1>
         <nav class="navigation">
             <a href="index.html" class="button">На главную</a>
-            <a href="course.html" class="button">Курсы</a>
-            <a href="awards.html" class="button">Награды</a>
-            <a href="project.html" class="button">Проект "Наставничество. Юнармия"</a>
-            <a href="geography.html" class="button">География</a>
         </nav>
+
+        <div class="container">
+            <div class="slider">
+                <div class="slides">
+                    <img src="img/foto1.png" alt="Изображение 1" onclick="zoomImage(this)">
+                    <img src="img/foto2.png" alt="Изображение 2" onclick="zoomImage(this)">
+                    <img src="img/foto3.png" alt="Изображение 3" onclick="zoomImage(this)">
+                    <img src="img/foto4.png" alt="Изображение 3"onclick="zoomImage(this)">
+                    <img src="img/foto5.png" alt="Изображение 3" onclick="zoomImage(this)">
+                    <img src="img/foto6.png" alt="Изображение 3" onclick="zoomImage(this)">
+                    <img src="img/foto7.png" alt="Изображение 3" onclick="zoomImage(this)">
+                    <img src="img/foto8.png" alt="Изображение 3" onclick="zoomImage(this)">
+                    <img src="img/foto9.png" alt="Изображение 3" onclick="zoomImage(this)">
+                    <img src="img/foto10.png" alt="Изображение 3" onclick="zoomImage(this)">
+                    <img src="img/foto11.png" alt="Изображение 3" onclick="zoomImage(this)">
+                    <img src="img/foto12.png" alt="Изображение 3" onclick="zoomImage(this)">
+                    <img src="img/foto13.png" alt="Изображение 3" onclick="zoomImage(this)">
+                    <img src="img/foto14.png" alt="Изображение 3" onclick="zoomImage(this)">
+                    <img src="img/foto15.png" alt="Изображение 3" onclick="zoomImage(this)">
+                    <img src="img/foto16.jpg" alt="Изображение 3" onclick="zoomImage(this)">
+                    <img src="img/foto17.jpg" alt="Изображение 3" onclick="zoomImage(this)">
+                </div>
+                <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                <button class="next" onclick="changeSlide(1)">&#10095;</button>
+            </div>
+            
+
+            <div class="thumbnails">
+                <img src="img/foto1.png" alt="Изображение 1" onclick="showSlide(0)" class="thumbnail">
+                <img src="img/foto2.png" alt="Изображение 2" onclick="showSlide(1)" class="thumbnail">
+                <img src="img/foto3.png" alt="Изображение 3" onclick="showSlide(2)" class="thumbnail">
+                <img src="img/foto4.png" alt="Изображение 3" onclick="showSlide(3)" class="thumbnail">
+                <img src="img/foto5.png" alt="Изображение 3" onclick="showSlide(4)" class="thumbnail">
+                <img src="img/foto6.png" alt="Изображение 3" onclick="showSlide(5)" class="thumbnail">
+                <img src="img/foto7.png" alt="Изображение 3" onclick="showSlide(6)" class="thumbnail">
+                <img src="img/foto8.png" alt="Изображение 3" onclick="showSlide(7)" class="thumbnail">
+                <img src="img/foto9.png" alt="Изображение 3" onclick="showSlide(8)" class="thumbnail">
+                <img src="img/foto10.png" alt="Изображение 3" onclick="showSlide(9)" class="thumbnail">
+                <img src="img/foto11.png" alt="Изображение 3" onclick="showSlide(10)" class="thumbnail">
+                <img src="img/foto12.png" alt="Изображение 3" onclick="showSlide(11)" class="thumbnail">
+                <img src="img/foto13.png" alt="Изображение 3" onclick="showSlide(12)" class="thumbnail">
+                <img src="img/foto14.png" alt="Изображение 3" onclick="showSlide(13)" class="thumbnail">
+                <img src="img/foto15.png" alt="Изображение 3" onclick="showSlide(14)" class="thumbnail">
+                <img src="img/foto16.jpg" alt="Изображение 3" onclick="showSlide(15)" class="thumbnail">
+                <img src="img/foto17.jpg" alt="Изображение 3" onclick="showSlide(16)" class="thumbnail">
+            </div>
+
+        </div>
+
+        <div class="overlay" onclick="closeZoom()">
+            <img id="zoomedImage" src="" alt="Zoomed Image">
+        </div>
+
     </div>
+    
+    <script src="script.js"></script>
 </body>
 </html>
